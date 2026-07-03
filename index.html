@@ -15,14 +15,43 @@
     <a href="contact.html">Contact</a>
 </nav>
     <div class="card">
-        <h1 class="title">🚀 TaskFlow AI</h1>
+    <h1 class="title">🚀 TaskFlow AI</h1>
 
-        <input type="text" id="taskInput" placeholder="Enter a task">
+    <input type="text" id="taskInput" placeholder="Enter a task">
 
-        <button onclick="addTask()">Add Task</button>
-<button onclick="showMessage()">Click Me!</button>
-        <ul id="taskList"></ul>
+    <input type="date" id="taskDate">
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search tasks..."
+        onkeyup="searchTask()">
+
+    <button onclick="addTask()">Add Task</button>
+    <button onclick="showMessage()">Click Me!</button>
+
+    <progress id="progressBar" max="100" value="0"></progress>
+    <p id="progressText">0% Completed</p>
+
+    <div class="stats">
+        <div class="stat-card">
+            <h3>Total Tasks</h3>
+            <p id="totalTasks">0</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>Completed</h3>
+            <p id="completedTasks">0</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>Pending</h3>
+            <p id="pendingTasks">0</p>
+        </div>
     </div>
+
+    <ul id="taskList"></ul>
+</div>
 
     <script src="script.js"></script>
 </body>
