@@ -3,7 +3,7 @@ let taskList = document.getElementById("taskList");
 // Load tasks when page opens
 window.onload = function () {
     let savedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
-taskList.innerhtml="";
+taskList.innerHTML= "";
     savedTasks.forEach(task => {
         createTask(task);
     });
@@ -77,8 +77,9 @@ function saveTask(task) {
     let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
     tasks.push(task);
     localStorage.setItem("tasks", JSON.stringify(tasks));
-}
 
+    console.log(localStorage.getItem("tasks"));
+}
 // Remove task
 function removeTask(taskText) {
     let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
