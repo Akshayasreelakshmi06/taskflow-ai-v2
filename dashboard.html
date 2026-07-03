@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - TaskFlow AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+</nav>
+
+<div class="card">
+
+    <h1 class="title">📋 TaskFlow AI Dashboard</h1>
+
+    <h2>Welcome, Akshaya! 👋</h2>
+    <div class="stats">
+
+    <div class="stat-card">
+        <h3>Total Tasks</h3>
+        <p id="totalTasks">0</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Completed</h3>
+        <p id="completedTasks">0</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Pending</h3>
+        <p id="pendingTasks">0</p>
+    </div>
+
+</div>
+<input type="text" id="searchInput" placeholder="Search tasks..." onkeyup="searchTask()">
+    <input type="text" id="taskInput" placeholder="Enter a new task">
+
+    <button onclick="addTask()">➕ Add Task</button>
+<h3>Progress</h3>
+
+<progress id="progressBar" value="0" max="100"></progress>
+
+<p id="progressText">0% Completed</p>
+    <h3>My Tasks</h3>
+
+    <ul id="taskList"></ul>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
