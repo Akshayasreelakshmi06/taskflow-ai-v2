@@ -21,6 +21,7 @@ function addTask() {
     }
 
     createTask(taskText, taskDate);
+    saveTask(taskText);
 
     input.value = "";
     dateInput.value = "";
