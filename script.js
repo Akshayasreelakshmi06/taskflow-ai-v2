@@ -59,7 +59,7 @@ function editTask(button) {
 }
 
 function deleteTask(button) {
-    let li = button.parentElement;
+    let li = button.closest("li");
     let taskText = li.querySelector("span").innerText;
 
     li.remove();
