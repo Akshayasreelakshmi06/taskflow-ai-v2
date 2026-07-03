@@ -3,28 +3,27 @@ let taskList = document.getElementById("taskList");
 // Load tasks when page opens
 window.onload = function () {
     let savedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
-
+taskList.innerhtml="";
     savedTasks.forEach(task => {
         createTask(task);
     });
 };
 function addTask() {
     let input = document.getElementById("taskInput");
-    let dateInput = document.getElementById("taskDate");
+   
 
     let taskText = input.value;
-    let taskDate = dateInput.value;
 
-    if (taskText === "") {
+    if (taskText.trim() === "") {
         alert("Please enter a task");
         return;
     }
 
-    createTask(taskText, taskDate);
+    createTask(taskText);
     saveTask(taskText);
 
     input.value = "";
-    dateInput.value = "";
+    
 
     updateProgress();
 }
